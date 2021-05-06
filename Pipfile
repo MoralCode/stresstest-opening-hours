@@ -1,0 +1,12 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jsonify-opening-hours = {path = "./../Opening Hours Parser"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
