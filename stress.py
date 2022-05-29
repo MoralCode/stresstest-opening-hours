@@ -1,5 +1,5 @@
 
-from parse_opening_hours import JsonOpeningHours
+from opening_hours import OpeningHours
 
 
 with open("big list.txt") as fp:
