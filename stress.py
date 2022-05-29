@@ -17,4 +17,4 @@ with open("data/giscorps.txt", "rb") as fp:
 			print("Could not parse: \"{}\"".format(line.strip()))
 			fail += 1
 	
-	print("{} lines total, {} successfully parsed, {} failed. {}% succeeded".format(success+fail, success, fail, success/(success+fail)))
+	print("{} lines total, {} successfully parsed, {} failed. {}% succeeded".format(success+fail, success, fail, (success/(success+fail))*100))
