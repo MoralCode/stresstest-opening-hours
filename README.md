@@ -8,4 +8,6 @@ This is real world data with real-world quirks that parse-opening-hours hopes to
 
 ## Usage
 
-Just `pipenv install` and `pipenv run python3 ./stress.py`. you can also pass an optional path to a file containing dates to parse, one per line. The default is to use the file at `data/giscorps.txt` 
+Just `pipenv install` and `pipenv run python3 ./stress.py`. you can also pass an optional path to a file containing dates to parse, one per line. The default is to use the file at `data/giscorps.txt`
+
+there is also a `--results` flag that can be used to passa  filepath to a csv file in which to store the results.
