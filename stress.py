@@ -2,7 +2,7 @@
 from opening_hours import OpeningHours
 
 
-with open("big list.txt") as fp:
+with open("data/giscorps.txt", "rb") as fp:
 	success = 0
 	fail = 0
 	for line in fp:
