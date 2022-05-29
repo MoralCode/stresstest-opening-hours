@@ -1,9 +1,17 @@
 
 from opening_hours import OpeningHours
 from datetime import date
+import argparse
 
 DATAFILE = "data/giscorps.txt"
-with open(DATAFILE, "rb") as fp:
+
+
+parser = argparse.ArgumentParser(description='Stress test the opening hours parser with some real world data')
+parser.add_argument('datafile', help='the path to the data file to use for this test')
+
+args = parser.parse_args()
+
+with open(args.datafile, "rb") as fp:
 	success = 0
 	fail = 0
 	for line in fp:
@@ -22,4 +30,4 @@ with open(DATAFILE, "rb") as fp:
 			print("Could not parse: \"{}\"".format(value))
 			fail += 1
 	
-	print("Results from {} on {}: {} lines total, {} successfully parsed, {} failed. {:.2f}% succeeded".format(DATAFILE, date.today().isoformat(), success+fail, success, fail, (success/(success+fail))*100))
+	print("Results from {} on {}: {} lines total, {} successfully parsed, {} failed. {:.2f}% succeeded".format(args.datafile, date.today().isoformat(), success+fail, success, fail, (success/(success+fail))*100))
