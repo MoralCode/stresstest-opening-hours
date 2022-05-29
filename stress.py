@@ -7,7 +7,7 @@ DATAFILE = "data/giscorps.txt"
 
 
 parser = argparse.ArgumentParser(description='Stress test the opening hours parser with some real world data')
-parser.add_argument('datafile', help='the path to the data file to use for this test')
+parser.add_argument('datafile', default="data/giscorps.txt", help='the path to the data file to use for this test')
 
 args = parser.parse_args()
 
