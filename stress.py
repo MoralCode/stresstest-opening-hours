@@ -18,4 +18,4 @@ with open(DATAFILE, "rb") as fp:
 			print("Could not parse: \"{}\"".format(line.strip()))
 			fail += 1
 	
-	print("{} lines total, {} successfully parsed, {} failed. {}% succeeded".format(success+fail, success, fail, (success/(success+fail))*100))
+	print("Results from {}: {} lines total, {} successfully parsed, {} failed. {}% succeeded".format(DATAFILE, success+fail, success, fail, (success/(success+fail))*100))
