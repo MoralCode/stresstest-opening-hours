@@ -11,7 +11,7 @@ with open("data/giscorps.txt", "rb") as fp:
 
 		try:
 
-			JsonOpeningHours.parse(line)
+			OpeningHours.parse(line).json()
 			success += 1
 		except:
 			print("Could not parse: \"{}\"".format(line.strip()))
