@@ -2,7 +2,8 @@
 from opening_hours import OpeningHours
 
 
-with open("data/giscorps.txt", "rb") as fp:
+DATAFILE = "data/giscorps.txt"
+with open(DATAFILE, "rb") as fp:
 	success = 0
 	fail = 0
 	for line in fp:
